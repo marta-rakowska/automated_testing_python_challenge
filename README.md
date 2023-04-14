@@ -17,7 +17,7 @@ Scouts Panel</br>
 //*[text()="Scouts Panel"]</br>
 //*[@class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"]</br>
 
-Login</br>
+Login Input</br>
 //*[@id="login"]</br>
 //*[text()="Login"]</br>
 //*[@name="login"]</br>
