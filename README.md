@@ -12,40 +12,40 @@ Wynik: "UDZIELONO ODPOWIEDZI DOBRZE NA 9 Z 14"
 
 Wymień wszystkie elementy znajdujące się na stronie, a następnie pod każdym z nich wymień 3 działające selektory.
 
-Scouts Panel
-//*[@id="__next"]/form/div/div[1]/h5
-//*[text()="Scouts Panel"]
-//*[@class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"]
+Scouts Panel</br>
+//*[@id="__next"]/form/div/div[1]/h5</br>
+//*[text()="Scouts Panel"]</br>
+//*[@class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"]</br>
 
-Login
-//*[@id="login"]
-//*[text()="Login"]
-//*[@name="login"]
+Login</br>
+//*[@id="login"]</br>
+//*[text()="Login"]</br>
+//*[@name="login"]</br>
 
-Password
-//*[@id="password"]
-//*[@name="password"]
-//*[contains(@type,"password")]
+Password</br>
+//*[@id="password"]</br>
+//*[@name="password"]</br>
+//*[contains(@type,"password")]</br>
 
-Remind password
-//*[@id="__next"]/form/div/div[1]/a
-//*[text()="Remind Password"]
-//child::div/a
+Remind password</br>
+//*[@id="__next"]/form/div/div[1]/a</br>
+//*[text()="Remind Password"]</br>
+//child::div/a</br>
 
-Polski
-//*[@id="menu-"]/div[3]/ul/li[1]
-//*[text()="Polski"]
-//*[contains(@data-value, "pl")]
+Polski</br>
+//*[@id="menu-"]/div[3]/ul/li[1]</br>
+//*[text()="Polski"]</br>
+//*[contains(@data-value, "pl")]</br>
 
-English
-//*[@id="menu-"]/div[3]/ul/li[2]
-//*[text()="English"]
-//*[contains(@data-value, "en")]
+English</br>
+//*[@id="menu-"]/div[3]/ul/li[2]</br>
+//*[text()="English"]</br>
+//*[contains(@data-value, "en")]</br>
 
-Sign In
-//*[@id="__next"]/form/div/div[2]/button/span[1]
-//*[contains(@type,"submit")]
-//*[text()="Sign in"]
+Sign In</br>
+//*[@id="__next"]/form/div/div[2]/button/span[1]</br>
+//*[contains(@type,"submit")]</br>
+//*[text()="Sign in"]</br>
 
 
 
