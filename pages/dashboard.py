@@ -1,7 +1,9 @@
+import time
+
 from pages.base_page import BasePage
 
-
 class Dashboard(BasePage):
+
     main_page_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[1]/div[1]/div[2]/span"
     players_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[1]/div[2]/div[2]/span"
     language_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[2]/div[1]/div[2]/span"
@@ -21,4 +23,10 @@ class Dashboard(BasePage):
     last_updated_match_xpath = "//*[@id='__next']/div[1]/main/div[3]/div[3]/div/div/h6[4]"
     last_updated_report_xpath = "//*[@id='__next']/div[1]/main/div[3]/div[3]/div/div/h6[5]"
 
-    pass
+    expected_title = "Scouts panel"
+    dashboard_url = "https://scouts-test.futbolkolektyw.pl/"
+    def title_of_page(self):
+        time.sleep(4)
+        assert self.get_page_title(self.dashboard_url) == self.expected_title
+    def click_add_a_player_button(self):
+        self.click_on_the_element(self.add_player_xpath)

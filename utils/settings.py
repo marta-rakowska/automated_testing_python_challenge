@@ -21,7 +21,7 @@ DEFAULT_LOCATOR_TYPE = By.XPATH
 UPPERCASE_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 LOWERCASE_LETTERS = "abcdefghijklmnopqrstuvwxyz"
 
-if SYSTEM == 'windows':
+if SYSTEM == 'win32':
     CHROME_DRIVER = 'chromedriver.exe'
     FIREFOX_DRIVER = 'geckodriver.exe'
     EDGE_DRIVER = 'MicrosoftWebDriver.exe'
