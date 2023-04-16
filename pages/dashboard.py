@@ -2,6 +2,7 @@ import time
 
 from pages.base_page import BasePage
 
+# poprawić selektory!!!
 class Dashboard(BasePage):
 
     main_page_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[1]/div[1]/div[2]/span"

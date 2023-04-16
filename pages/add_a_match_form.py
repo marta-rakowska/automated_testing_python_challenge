@@ -1,6 +1,6 @@
 from pages.base_page import BasePage
 
-
+# poprawić selektory!!!
 class AddAMatchForm(BasePage):
     main_page_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[1]/div[1]/div[2]/span"
     players_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[1]/div[2]/div[2]/span"
@@ -24,5 +24,3 @@ class AddAMatchForm(BasePage):
     rating_xpath = "//*[@name='rating']"
     submit_xpath = "//*[@id='__next']/div[1]/main/div[2]/form/div[3]/button[1]/span[1]"
     clear_xpath = "//*[@id='__next']/div[1]/main/div[2]/form/div[3]/button[2]/span[1]"
-
-    pass

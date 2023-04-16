@@ -5,7 +5,7 @@ from selenium import webdriver
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 from pages.login_page import LoginPage
 from pages.dashboard import Dashboard
-from pages.add_a_player import AddAPlayer
+from pages.add_a_player_form import AddAPlayer
 
 class TestAddAPlayer(unittest.TestCase):
 
