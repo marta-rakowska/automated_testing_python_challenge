@@ -4,11 +4,10 @@ from pages.base_page import BasePage
 
 # poprawić selektory!!!
 class Dashboard(BasePage):
-
-    main_page_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[1]/div[1]/div[2]/span"
-    players_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[1]/div[2]/div[2]/span"
-    language_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[2]/div[1]/div[2]/span"
-    sign_out_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[2]/div[2]/div[2]/span"
+    main_page_xpath = "//*[text()='Main page']"
+    players_xpath = "//*[text()='Players']"
+    polski_xpath = "//*[text()='Polski']"
+    sign_out_xpath = "//*[text()='Sign out']"
     players_count_xpath = "//*[@id='__next']/div[1]/main/div[2]/div[1]/div/div[1]"
     matches_count_xpath = "//*[@id='__next']/div[1]/main/div[2]/div[2]/div/div[1]"
     reports_count_xpath = "//*[@id='__next']/div[1]/main/div[2]/div[3]/div/div[1]"
