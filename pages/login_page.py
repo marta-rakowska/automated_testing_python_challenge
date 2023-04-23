@@ -7,9 +7,10 @@ class LoginPage(BasePage):
     login_field_xpath = "//*[@id='login']"
     password_field_xpath = "//*[@id='password']"
     sign_in_button_xpath = "//*[@type='submit']"
-
     expected_title = "Scouts panel - sign in"
-    login_url = "https://scouts-test.futbolkolektyw.pl/login"
+    login_url = "https://scouts-test.futbolkolektyw.pl/en/login"
+    add_a_player_button_xpath = "//div[2]/div/div/a/button/span[1]"
+
     def type_in_email(self, email):
         self.field_send_keys(self.login_field_xpath, email)
     def type_in_password(self, password):
@@ -18,5 +19,6 @@ class LoginPage(BasePage):
         self.click_on_the_element(self.sign_in_button_xpath)
 
     def title_of_page(self):
-        time.sleep(4)
+        self.wait_for_element_to_be_clickable(self.login_field_xpath)
         assert self.get_page_title(self.login_url) == self.expected_title
+

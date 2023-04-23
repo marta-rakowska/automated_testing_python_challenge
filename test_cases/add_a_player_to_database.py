@@ -5,9 +5,10 @@ from selenium import webdriver
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 from pages.login_page import LoginPage
 from pages.dashboard import Dashboard
+from pages.add_a_player_form import AddAPlayer
 
 
-class TestLoginPage(unittest.TestCase):
+class TestAddAPlayer(unittest.TestCase):
 
     @classmethod
     def setUp(self):
@@ -17,7 +18,7 @@ class TestLoginPage(unittest.TestCase):
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
-    def test_log_in_to_the_system(self):
+    def test_add_a_player_to_database(self):
         user_login = LoginPage(self.driver)
         user_login.title_of_page()
         user_login.type_in_email('user01@getnada.com')
@@ -25,7 +26,18 @@ class TestLoginPage(unittest.TestCase):
         user_login.click_sign_in_button()
         dashboard_page = Dashboard(self.driver)
         dashboard_page.title_of_page()
-        time.sleep(5)
+        time.sleep(3)
+        dashboard_page.click_add_a_player_button()
+        time.sleep(3)
+        add_a_player = AddAPlayer(self.driver)
+        add_a_player.title_of_page()
+        time.sleep(3)
+        add_a_player.type_in_name('Jan')
+        add_a_player.type_in_surname('Kowalski')
+        add_a_player.type_in_age('01.01.2001')
+        add_a_player.type_in_main_position('goalkeeper')
+        add_a_player.click_submit_button()
+        time.sleep(3)
 
     @classmethod
     def tearDown(self):

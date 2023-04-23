@@ -29,9 +29,10 @@ class TestAddAPlayer(unittest.TestCase):
         time.sleep(5)
         dashboard_page.click_add_a_player_button()
         time.sleep(5)
-        add_a_player_page = AddAPlayer(self.driver)
-        add_a_player_page.title_of_page()
+        add_a_player = AddAPlayer(self.driver)
+        add_a_player.title_of_page()
         time.sleep(5)
+
 
     @classmethod
     def tearDown(self):

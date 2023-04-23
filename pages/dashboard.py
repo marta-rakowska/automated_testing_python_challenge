@@ -1,5 +1,6 @@
 import time
 
+from selenium.webdriver.support.wait import WebDriverWait
 from pages.base_page import BasePage
 
 class Dashboard(BasePage):
@@ -17,8 +18,19 @@ class Dashboard(BasePage):
 
     expected_title = "Scouts panel"
     dashboard_url = "https://scouts-test.futbolkolektyw.pl/"
+
     def title_of_page(self):
-        time.sleep(4)
+        self.wait_for_element_to_be_clickable(self.main_page_xpath)
         assert self.get_page_title(self.dashboard_url) == self.expected_title
+
     def click_add_a_player_button(self):
         self.click_on_the_element(self.add_player_xpath)
+
+    def click_sign_out_button(self):
+        self.click_on_the_element(self.sign_out_xpath)
+
+    def click_polski_button(self):
+        self.click_on_the_element(self.polski_xpath)
+
+    def click_players_button(self):
+        self.click_on_the_element(self.players_xpath)
