@@ -15,7 +15,7 @@ I am pursuing postgraduate studies in Python programming. I had Selenium and Rob
 
 [//]: <> (Jestem w trakcie studiów podyplomowych na kierunku "Programista Python Developer" w WSB. Na jednym ze zjazdów miałam zajęcia z Selenium i Robot Framework, które tak mi się spodobały że podstanowiłam poszerzyć swoją wiedzę na ten temat biorąc udział w wyzwaniu Dare IT.)
 
-## Optional task: "PURPUROWY" test from GET ISTQB website
+### Optional task: "PURPUROWY" test from GET ISTQB website
 
 Result: 9/14
 
