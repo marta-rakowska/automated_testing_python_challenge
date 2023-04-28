@@ -7,7 +7,7 @@ from pages.login_page import LoginPage
 from pages.dashboard import Dashboard
 from pages.add_a_player_form import AddAPlayer
 
-class TestAddAPlayer(unittest.TestCase):
+class TestGoToAddAPlayerForm(unittest.TestCase):
 
     @classmethod
     def setUp(self):
