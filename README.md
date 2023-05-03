@@ -4,7 +4,7 @@
 
 The goal of this task was to:
 - execute exploratory testing,
-- get to know which programs are necessary to start automated testing,
+- learn which programs are necessary to start automated testing,
 - create a GIT repository,
 - clone the repo and set up a working environment,
 - format a README file.
@@ -22,9 +22,9 @@ Result: 9/14
 ## Task 2️⃣
 
 The goal of this task was to:
-- get to know what selectors are,
-- get to know where to find selectors,
-- get to know how to write XPaths, 
+- learn what selectors are,
+- learn where to find selectors,
+- learn how to write XPaths, 
 - understand how to choose the best selectors.
 
 List all elements located on the website and three selectors relative to each of them.
@@ -67,7 +67,7 @@ List all elements located on the website and three selectors relative to each of
 ## Task 3️⃣
 
 The goal of this task was to:
-- get to know unittest framework,
+- learn unittest framework,
 - click on elements of the website,
 - fill in the fields,
 - use "assert",
@@ -77,13 +77,21 @@ The goal of this task was to:
 
 The goal of this task was to:
 - refactor the code,
-- get to know how to work with debugger,
+- learn how to work with debugger,
 - write test cases, 
 - automate the webpage on the basis of test cases.
 
 Google Drive: [click here](https://drive.google.com/drive/folders/1X0jLapKF8UmqdAVsQ_BPGTm_n6Tubutz?usp=share_link)
 
 ## Task 5️⃣
+
+The goal of this task was to:
+- learn what Smoke Tests are,
+- learn how to configure Suite Test,
+- learn a new framework,
+- automatically generate a report.
+
+You can find the solution of this task [here](https://github.com/marta-rakowska/panelscout_robotframework).
 
 ## Task 6️⃣
 
