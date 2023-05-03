@@ -88,7 +88,7 @@ Google Drive: [click here](https://drive.google.com/drive/folders/1X0jLapKF8Umqd
 The goal of this task was to:
 - learn what Smoke Tests are,
 - learn how to configure Suite Test,
-- learn a new framework,
+- learn a new framework (Robot Framework),
 - automatically generate a report.
 
 You can find the solution of this task [here](https://github.com/marta-rakowska/panelscout_robotframework).
