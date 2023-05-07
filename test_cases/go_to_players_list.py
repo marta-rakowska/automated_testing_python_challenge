@@ -5,6 +5,7 @@ from selenium import webdriver
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 from pages.login_page import LoginPage
 from pages.dashboard import Dashboard
+from pages.players_list import PlayersList
 
 
 class TestGoToPlayersList(unittest.TestCase):
@@ -28,6 +29,8 @@ class TestGoToPlayersList(unittest.TestCase):
         time.sleep(3)
         dashboard_page.click_players_button()
         time.sleep(3)
+        players_list = PlayersList(self.driver)
+        players_list.page_url()
 
     @classmethod
     def tearDown(self):

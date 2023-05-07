@@ -13,7 +13,7 @@ class TestGoToAddAPlayerForm(unittest.TestCase):
     def setUp(self):
         os.chmod(DRIVER_PATH, 755)
         self.driver = webdriver.Chrome(executable_path=DRIVER_PATH)
-        self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
+        self.driver.get('https://scouts.futbolkolektyw.pl/en')
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
@@ -31,8 +31,6 @@ class TestGoToAddAPlayerForm(unittest.TestCase):
         time.sleep(5)
         add_a_player = AddAPlayer(self.driver)
         add_a_player.title_of_page()
-        time.sleep(5)
-
 
     @classmethod
     def tearDown(self):

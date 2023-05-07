@@ -95,6 +95,11 @@ You can find the solution of this task [here](https://github.com/marta-rakowska/
 
 ## Task 6️⃣
 
+The goal of this task was to:
+- learn how to find bugs,
+- learn how to report bugs,
+- learn how to write a test report.
+
 
 
 

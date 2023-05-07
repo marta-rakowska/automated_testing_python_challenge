@@ -10,6 +10,11 @@ class LoginPage(BasePage):
     expected_title = "Scouts panel - sign in"
     login_url = "https://scouts-test.futbolkolektyw.pl/en/login"
     add_a_player_button_xpath = "//div[2]/div/div/a/button/span[1]"
+    text_xpath = "//*/div[1]/h5"
+    expected_text = "Scouts Panel"
+    language_dropdown_button_xpath = "//*[@aria-haspopup='listbox']"
+    polish_option_xpath = "//*[@data-value='pl']"
+    english_option_xpath = "//*[@data-value='en']"
 
     def type_in_email(self, email):
         self.field_send_keys(self.login_field_xpath, email)
@@ -21,4 +26,16 @@ class LoginPage(BasePage):
     def title_of_page(self):
         self.wait_for_element_to_be_clickable(self.login_field_xpath)
         assert self.get_page_title(self.login_url) == self.expected_title
+
+    def check_header_text(self):
+        self.assert_element_text(self.driver, self.text_xpath, self.expected_text)
+
+    def select_language(self, language):
+        self.click_on_the_element(self.language_dropdown_button_xpath)
+        time.sleep(1)
+        if language == "english":
+            self.click_on_the_element(self.english_option_xpath)
+        else:
+            self.click_on_the_element(self.polish_option_xpath)
+
 

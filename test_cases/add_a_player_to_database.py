@@ -39,11 +39,12 @@ class TestAddAPlayer(unittest.TestCase):
         add_a_player.type_in_weight('68')
         add_a_player.type_in_height('180')
         add_a_player.type_in_age('01.01.2001')
-        add_a_player.type_in_leg('Right leg')
+        add_a_player.select_leg('right')
         add_a_player.type_in_club('FC JK')
         add_a_player.type_in_level('1')
         add_a_player.type_in_main_position('goalkeeper')
         add_a_player.type_in_second_position('defender')
+        add_a_player.select_district('Silesia')
         add_a_player.type_in_achievements('no achievements')
         add_a_player.click_add_language_button()
         add_a_player.type_in_languages('English')
@@ -55,6 +56,7 @@ class TestAddAPlayer(unittest.TestCase):
         add_a_player.type_in_link_to_youtube('https://www.youtube.com/watch?v=A-FKkuqXeRg')
         add_a_player.click_remove_link_to_youtube_button()
         add_a_player.click_submit_button()
+
 
     @classmethod
     def tearDown(self):

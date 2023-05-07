@@ -19,6 +19,13 @@ class Test(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
+    def test_change_language(self):
+        user_login = LoginPage(self.driver)
+        user_login.select_language("english")
+        time.sleep(3)
+        user_login.select_language("polski")
+        time.sleep(3)
+
     def test_print_nice_words(self):
         print("WELL DONE!!!!!!!!!")
 
