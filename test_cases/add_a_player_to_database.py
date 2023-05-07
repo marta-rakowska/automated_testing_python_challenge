@@ -38,7 +38,7 @@ class TestAddAPlayer(unittest.TestCase):
         add_a_player.type_in_phone('123456789')
         add_a_player.type_in_weight('68')
         add_a_player.type_in_height('180')
-        add_a_player.type_in_age('01.01.2001')
+        add_a_player.type_in_age('111999')
         add_a_player.select_leg('right')
         add_a_player.type_in_club('FC JK')
         add_a_player.type_in_level('1')
@@ -48,15 +48,13 @@ class TestAddAPlayer(unittest.TestCase):
         add_a_player.type_in_achievements('no achievements')
         add_a_player.click_add_language_button()
         add_a_player.type_in_languages('English')
-        add_a_player.click_remove_language_button()
         add_a_player.type_in_laczy_nas_pilka('www.laczynaspilka.pl/jankowalski')
         add_a_player.type_in_dziewiecdziesiat_minut('www.90minut.pl/jankowalski')
         add_a_player.type_in_facebook('www.facebook.com/jankowalski')
         add_a_player.click_add_link_to_youtube_button()
         add_a_player.type_in_link_to_youtube('https://www.youtube.com/watch?v=A-FKkuqXeRg')
-        add_a_player.click_remove_link_to_youtube_button()
         add_a_player.click_submit_button()
-
+        add_a_player.title_of_edit_page()
 
     @classmethod
     def tearDown(self):
