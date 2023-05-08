@@ -5,6 +5,7 @@ from selenium import webdriver
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 from pages.login_page import LoginPage
 from pages.dashboard import Dashboard
+from pages.polish_dashboard import PolishDashboard
 
 
 class TestChangeLanguage(unittest.TestCase):
@@ -24,10 +25,10 @@ class TestChangeLanguage(unittest.TestCase):
         user_login.type_in_password('Test-1234')
         user_login.click_sign_in_button()
         dashboard_page = Dashboard(self.driver)
-        dashboard_page.title_of_page()
-        time.sleep(3)
         dashboard_page.click_polski_button()
-        time.sleep(3)
+        polish_dashboard = PolishDashboard(self.driver)
+        polish_dashboard.page_url()
+
 
     @classmethod
     def tearDown(self):

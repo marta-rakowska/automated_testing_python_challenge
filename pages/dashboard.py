@@ -30,6 +30,7 @@ class Dashboard(BasePage):
         self.click_on_the_element(self.sign_out_xpath)
 
     def click_polski_button(self):
+        self.wait_for_element_to_be_clickable(self.polski_xpath)
         self.click_on_the_element(self.polski_xpath)
 
     def click_players_button(self):
@@ -38,3 +39,5 @@ class Dashboard(BasePage):
     def click_last_created_player(self):
         self.wait_for_element_to_be_clickable(self.last_created_player_xpath)
         self.click_on_the_element(self.last_created_player_xpath)
+
+

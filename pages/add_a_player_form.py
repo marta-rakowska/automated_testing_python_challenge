@@ -1,6 +1,9 @@
 import time
 
+from selenium.webdriver.common.by import By
+
 from pages.base_page import BasePage
+
 
 class AddAPlayer(BasePage):
     main_page_xpath = "//*[text()='Main page']"
@@ -13,7 +16,7 @@ class AddAPlayer(BasePage):
     phone_xpath = "//*[@name='phone']"
     weight_xpath = "//*[@name='weight']"
     height_xpath = "//*[@name='height']"
-    age_xpath = "//*[@name='age']"
+    age_xpath = "//*/div[2]/div/div[7]/div/div/input"
     club_xpath = "//*[@name='club']"
     level_xpath = "//*[@name='level']"
     main_position_xpath = "//*[@name='mainPosition']"
@@ -54,8 +57,10 @@ class AddAPlayer(BasePage):
     expected_title = "Add player"
     add_a_player_url = "https://scouts-test.futbolkolektyw.pl/en/players/add"
 
+    expected_assert_title = "Edit player Jan Kowalski"
+
     def title_of_page(self):
-        self.wait_for_element_to_be_clickable(self.main_page_xpath)
+        self.wait_for_element_to_be_visible(self.main_page_xpath)
         assert self.get_page_title(self.add_a_player_url) == self.expected_title
 
     def type_in_email(self, email):
@@ -79,9 +84,6 @@ class AddAPlayer(BasePage):
     def type_in_age(self, age):
         self.field_send_keys(self.age_xpath, age)
 
-    def type_in_leg(self, leg):
-        self.field_send_keys(self.leg_xpath, leg)
-
     def type_in_club(self, club):
         self.field_send_keys(self.club_xpath, club)
 
@@ -101,10 +103,6 @@ class AddAPlayer(BasePage):
         self.click_on_the_element(self.add_language_xpath)
     def type_in_languages(self, languages):
         self.field_send_keys(self.languages_xpath, languages)
-
-    def click_remove_language_button(self):
-        self.click_on_the_element(self.remove_language_xpath)
-
     def type_in_laczy_nas_pilka(self, laczy_nas_pilka):
         self.field_send_keys(self.laczy_nas_pilka_xpath, laczy_nas_pilka)
 
@@ -119,9 +117,6 @@ class AddAPlayer(BasePage):
 
     def type_in_link_to_youtube(self, link_to_youtube):
         self.field_send_keys(self.link_to_youtube_xpath, link_to_youtube)
-
-    def click_remove_link_to_youtube_button(self):
-        self.click_on_the_element(self.remove_link_to_youtube_xpath)
 
     def click_submit_button(self):
         self.click_on_the_element(self.submit_xpath)
@@ -174,5 +169,13 @@ class AddAPlayer(BasePage):
             self.click_on_the_element(self.greater_poland_xpath)
         else:
             self.click_on_the_element(self.west_pomerania_xpath)
+
+    def title_of_edit_page(self):
+        self.wait_for_element_to_be_clickable(self.main_page_xpath)
+        edit_page_url = self.driver.current_url
+        time.sleep(3)
+        assert self.get_page_title(edit_page_url) == self.expected_assert_title
+
+
 
 
