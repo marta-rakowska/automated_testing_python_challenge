@@ -81,7 +81,7 @@ The goal of this task was to:
 - write test cases, 
 - automate the webpage on the basis of test cases.
 
-Google Drive: [click here](https://drive.google.com/drive/folders/1X0jLapKF8UmqdAVsQ_BPGTm_n6Tubutz?usp=share_link)
+Google Drive: [click here](https://drive.google.com/drive/folders/1X0jLapKF8UmqdAVsQ_BPGTm_n6Tubutz?usp=share_link).
 
 ## Task 5️⃣
 
@@ -99,6 +99,8 @@ The goal of this task was to:
 - learn how to find bugs,
 - learn how to report bugs,
 - learn how to write a test report.
+
+You can find the solution of this task [here](https://drive.google.com/drive/folders/1DU61ovsgWxocZU52_CEFXh79J4YJABHq).
 
 
 
