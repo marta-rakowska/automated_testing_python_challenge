@@ -24,7 +24,6 @@ class TestLogOut(unittest.TestCase):
         user_login.type_in_password('Test-1234')
         user_login.click_sign_in_button()
         dashboard_page = Dashboard(self.driver)
-        dashboard_page.title_of_page()
         time.sleep(3)
         dashboard_page.click_sign_out_button()
         time.sleep(3)

@@ -25,7 +25,6 @@ class TestGoToAddAPlayerForm(unittest.TestCase):
         time.sleep(5)
         user_login.click_sign_in_button()
         dashboard_page = Dashboard(self.driver)
-        dashboard_page.title_of_page()
         time.sleep(5)
         dashboard_page.click_add_a_player_button()
         time.sleep(5)

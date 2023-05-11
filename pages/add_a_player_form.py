@@ -16,7 +16,7 @@ class AddAPlayer(BasePage):
     phone_xpath = "//*[@name='phone']"
     weight_xpath = "//*[@name='weight']"
     height_xpath = "//*[@name='height']"
-    age_xpath = "//*/div[2]/div/div[7]/div/div/input"
+    age_xpath = "//*/div[7]/div/div/input"
     club_xpath = "//*[@name='club']"
     level_xpath = "//*[@name='level']"
     main_position_xpath = "//*[@name='mainPosition']"
@@ -24,13 +24,11 @@ class AddAPlayer(BasePage):
     achievements_xpath = "//*[@name='achievements']"
     add_language_xpath = "//*/div[2]/div/div[15]/button"
     languages_xpath = "//*/div[15]/div/div/div/input"
-    remove_language_xpath = "//*[@title='Remove language']"
     laczy_nas_pilka_xpath = "//*[@name='webLaczy']"
     dziewiecdziesiat_minut_xpath = "//*[@name='web90']"
     facebook_xpath = "//*[@name='webFB']"
-    add_link_to_youtube_xpath = "//*/div[2]/div/div[19]/button"
-    link_to_youtube_xpath = "//*/form/div[2]/div/div[19]/div/div/div/input"
-    remove_link_to_youtube_xpath = "//*/form/div[2]/div/div[19]/div/button"
+    add_link_to_youtube_xpath = "//*/div/div[19]/button"
+    link_to_youtube_xpath = "//*/div/div[19]/div/div/div/input"
     submit_xpath = "//*[@type='submit']"
     clear_xpath = "//*[text()='Clear']"
     leg_dropdown_xpath = "//*[@id='mui-component-select-leg']"
@@ -55,7 +53,7 @@ class AddAPlayer(BasePage):
     west_pomerania_xpath = "//*[@data-value='zachodniopomorskie']"
 
     expected_title = "Add player"
-    add_a_player_url = "https://scouts-test.futbolkolektyw.pl/en/players/add"
+    add_a_player_url = "https://scouts.futbolkolektyw.pl/en/players/add"
 
     expected_assert_title = "Edit player Jan Kowalski"
 

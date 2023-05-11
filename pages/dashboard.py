@@ -10,14 +10,14 @@ class Dashboard(BasePage):
     sign_out_xpath = "//*[text()='Sign out']"
     dev_team_contact_xpath = "//*[text()='Dev team contact']"
     add_player_xpath = "//*[text()='Add player']"
-    last_created_player_xpath = "//*/div[3]/div[3]/div/div/a[1]/button/span[1]"
-    last_updated_player_xpath = "//*/div[3]/div[3]/div/div/a[2]/button/span[1]"
-    last_created_match_xpath = "//*/div[3]/div[3]/div/div/a[3]/button/span[1]"
-    last_updated_match_xpath = "//*/div[3]/div[3]/div/div/a[4]/button/span[1]"
-    last_updated_report_xpath = "//*/div[3]/div[3]/div/div/a[5]/button/span[1]"
+    last_created_player_xpath = "//*/div/a[1]/button/span[1]"
+    last_updated_player_xpath = "//*/div/a[2]/button/span[1]"
+    last_created_match_xpath = "//*/div/a[3]/button/span[1]"
+    last_updated_match_xpath = "//*/div/a[4]/button/span[1]"
+    last_updated_report_xpath = "//*/div/a[5]/button/span[1]"
 
     expected_title = "Scouts panel"
-    dashboard_url = "https://scouts-test.futbolkolektyw.pl/"
+    dashboard_url = "https://scouts.futbolkolektyw.pl/en"
 
     def title_of_page(self):
         self.wait_for_element_to_be_visible(self.main_page_xpath)
