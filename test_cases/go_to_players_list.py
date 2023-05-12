@@ -14,7 +14,7 @@ class TestGoToPlayersList(unittest.TestCase):
     def setUp(self):
         os.chmod(DRIVER_PATH, 755)
         self.driver = webdriver.Chrome(executable_path=DRIVER_PATH)
-        self.driver.get('https://scouts.futbolkolektyw.pl/en')
+        self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
@@ -25,9 +25,7 @@ class TestGoToPlayersList(unittest.TestCase):
         user_login.type_in_password('Test-1234')
         user_login.click_sign_in_button()
         dashboard_page = Dashboard(self.driver)
-        time.sleep(3)
         dashboard_page.click_players_button()
-        time.sleep(3)
         players_list = PlayersList(self.driver)
         players_list.page_url()
 

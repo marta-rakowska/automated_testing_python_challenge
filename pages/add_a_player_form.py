@@ -53,7 +53,7 @@ class AddAPlayer(BasePage):
     west_pomerania_xpath = "//*[@data-value='zachodniopomorskie']"
 
     expected_title = "Add player"
-    add_a_player_url = "https://scouts.futbolkolektyw.pl/en/players/add"
+    add_a_player_url = "https://scouts-test.futbolkolektyw.pl/en/players/add"
 
     expected_assert_title = "Edit player Jan Kowalski"
 
@@ -62,6 +62,7 @@ class AddAPlayer(BasePage):
         assert self.get_page_title(self.add_a_player_url) == self.expected_title
 
     def type_in_email(self, email):
+        self.wait_for_element_to_be_visible(self.email_xpath)
         self.field_send_keys(self.email_xpath, email)
 
     def type_in_name(self, name):
@@ -77,7 +78,7 @@ class AddAPlayer(BasePage):
         self.field_send_keys(self.weight_xpath, weight)
 
     def type_in_height(self, height):
-        self.field_send_keys(self.age_xpath, height)
+        self.field_send_keys(self.height_xpath, height)
 
     def type_in_age(self, age):
         self.field_send_keys(self.age_xpath, age)
@@ -170,8 +171,8 @@ class AddAPlayer(BasePage):
 
     def title_of_edit_page(self):
         self.wait_for_element_to_be_clickable(self.main_page_xpath)
-        edit_page_url = self.driver.current_url
         time.sleep(3)
+        edit_page_url = self.driver.current_url
         assert self.get_page_title(edit_page_url) == self.expected_assert_title
 
 

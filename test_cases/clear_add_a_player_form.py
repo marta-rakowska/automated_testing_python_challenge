@@ -14,7 +14,7 @@ class TestClearAddAPlayer(unittest.TestCase):
     def setUp(self):
         os.chmod(DRIVER_PATH, 755)
         self.driver = webdriver.Chrome(executable_path=DRIVER_PATH)
-        self.driver.get('https://scouts.futbolkolektyw.pl/en')
+        self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
@@ -25,11 +25,8 @@ class TestClearAddAPlayer(unittest.TestCase):
         user_login.type_in_password('Test-1234')
         user_login.click_sign_in_button()
         dashboard_page = Dashboard(self.driver)
-        time.sleep(2)
         dashboard_page.click_add_a_player_button()
-        time.sleep(2)
         add_a_player = AddAPlayer(self.driver)
-        time.sleep(2)
         add_a_player.type_in_email('jan.kowalski@jk.com')
         add_a_player.type_in_name('Jan')
         add_a_player.type_in_surname('Kowalski')
@@ -52,7 +49,6 @@ class TestClearAddAPlayer(unittest.TestCase):
         add_a_player.click_add_link_to_youtube_button()
         add_a_player.type_in_link_to_youtube('https://www.youtube.com/watch?v=A-FKkuqXeRg')
         add_a_player.click_clear_button()
-        time.sleep(3)
         add_a_player.title_of_page()
 
     @classmethod
