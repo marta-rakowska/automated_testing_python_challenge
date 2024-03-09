@@ -102,7 +102,9 @@ The goal of this task was to:
 
 You can find the solution of this task [here](https://drive.google.com/drive/folders/1DU61ovsgWxocZU52_CEFXh79J4YJABHq).
 
+## Requirements
 
+To run the tests you need to download chromedriver compatible with your version of Chrome.
 
 
 
